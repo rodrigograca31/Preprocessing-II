@@ -7,6 +7,26 @@
     border-radius: 20px;
     background: @color;
     font-size: 1.8rem;
-	text-align: center;
-	font-weight: bold;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.imgAnimated(@duration: 2s) {
+    -webkit-animation-name: you-spin-me-round;
+    -webkit-animation-duration: @duration;
+    animation-name: you-spin-me-round;
+    animation-duration: @duration;
+}
+
+
+/* Standard syntax */
+@keyframes you-spin-me-round {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

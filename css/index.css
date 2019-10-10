@@ -1,3 +1,12 @@
+/* Standard syntax */
+@keyframes you-spin-me-round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -185,6 +194,12 @@ img {
     overflow: overlay;
   }
 }
+img:hover {
+  -webkit-animation-name: you-spin-me-round;
+  -webkit-animation-duration: 1s;
+  animation-name: you-spin-me-round;
+  animation-duration: 1s;
+}
 section.navigation {
   display: flex;
   justify-content: space-between;
@@ -347,5 +362,34 @@ section.navigation nav a:hover {
   border-bottom: 2px dashed grey;
 }
 .home section.main-header img {
+  margin-bottom: 20px;
+}
+.form-destination {
+  margin: 50px 0;
+}
+.form-destination input,
+.form-destination textarea,
+.form-destination select {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid black;
+  font-size: 2rem;
+}
+.form-destination input[type="reset"],
+.form-destination textarea[type="reset"],
+.form-destination select[type="reset"],
+.form-destination input[type="submit"],
+.form-destination textarea[type="submit"],
+.form-destination select[type="submit"] {
+  width: 150px;
+  margin-right: 20px;
+}
+.form-destination label {
+  font-size: 2rem;
+  margin: 10px 0;
+  display: block;
+}
+.form-destination textarea {
+  height: 100px;
   margin-bottom: 20px;
 }
